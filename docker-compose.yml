@@ -1,0 +1,8 @@
+services:
+  latexmk:
+    build:
+      context: ./docker
+    image: alwaysmpe/docker-tex
+    volumes:
+      - ./:/data
+    command: "latexmk -pvc example.tex"
